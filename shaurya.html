@@ -14,7 +14,6 @@ body {
     background: #f4f9ff;
 }
 
-/* Navbar */
 nav {
     background: #0a6ebd;
     color: white;
@@ -22,10 +21,9 @@ nav {
     text-align: center;
 }
 
-/* Hero */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWIjBdR2zKufQTlrSNft70zyfDQ_x0fv-EE8ySBH29QRRLyUlRrt4wgyYpx5y5v-gzPuAtB14Sall9AYmRSrYjFM8J6yRshh4Uogt-JmA0iZA1y-5UY2b_s0psYscm0qtpDb9t=s1360-w1360-h1020-rw');
+    url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1500&q=80');
     background-size: cover;
     background-position: center;
     color: white;
@@ -43,13 +41,11 @@ nav {
     border-radius: 5px;
 }
 
-/* Section */
 section {
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -60,11 +56,9 @@ section {
     background: white;
     border-radius: 12px;
     margin: 15px;
-    padding: 20px;
     width: 260px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    font-size: 18px;
-    font-weight: 500;
+    padding: 20px;
 }
 
 .icon {
@@ -72,13 +66,18 @@ section {
     margin-bottom: 10px;
 }
 
-/* Form */
 input, select {
     padding: 12px;
     width: 80%;
     margin: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
+}
+
+.fee {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
 }
 
 footer {
@@ -103,6 +102,8 @@ footer {
 
 <section id="appointment">
     <h2>Book Appointment</h2>
+    <div class="fee">Consultation Fee: ₹500</div>
+
     <form onsubmit="bookAppointment(event)">
         <input type="text" placeholder="Patient Name" required><br>
         <input type="tel" placeholder="Mobile Number" required><br>
@@ -115,14 +116,14 @@ footer {
 
         <input type="date" required><br>
 
-        <button class="btn">Proceed to Payment</button>
+        <button class="btn">Pay ₹500 & Book</button>
     </form>
 </section>
 
 <section>
     <h2>About Us</h2>
     <p>
-        Shaurya Healthcare Center Delhi में स्थित एक trusted clinic है जहाँ experienced doctors 
+        Shaurya Healthcare Center, Delhi में स्थित एक trusted clinic है जहाँ experienced doctors 
         और modern facilities के साथ patients को best treatment दिया जाता है।
     </p>
 </section>
@@ -133,22 +134,26 @@ footer {
 
         <div class="card">
             <div class="icon">🚑</div>
-            24x7 Emergency Service
+            <h3>24x7 Emergency</h3>
+            <p>Immediate care available anytime.</p>
         </div>
 
         <div class="card">
             <div class="icon">🩺</div>
-            General Medicine Treatment
+            <h3>General Medicine</h3>
+            <p>Expert treatment for all diseases.</p>
         </div>
 
         <div class="card">
             <div class="icon">🧪</div>
-            Lab Testing Facility
+            <h3>Lab Test</h3>
+            <p>Fast and accurate reports.</p>
         </div>
 
         <div class="card">
             <div class="icon">💊</div>
-            Pharmacy Available
+            <h3>Pharmacy</h3>
+            <p>All medicines available.</p>
         </div>
 
     </div>
@@ -166,7 +171,7 @@ function scrollToForm() {
 
 function bookAppointment(e) {
     e.preventDefault();
-    alert("Appointment Booked! Redirecting to Payment...");
+    alert("Redirecting to Payment of ₹500...");
     window.location.href = "https://rzp.io/l/testpayment";
 }
 </script>
